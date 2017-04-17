@@ -73,7 +73,9 @@ nav:nth-child(1) {
 #domoEducation{
   float: none;
 }
-
+.removeForm input[type=submit]{
+  width: 125px;
+}
 .domoForm input[type=text] {
   float:left;
 }

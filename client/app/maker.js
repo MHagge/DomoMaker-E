@@ -36,7 +36,7 @@ const renderDomo = function(){
 
       <label id="EduLabel" htmlFor="educationLevel">Education Level: </label>
       <select id="domoEducation" name="educationLevel">
-        <option>HS/GED</option>
+        <option>High School/GED</option>
         <option>Some college</option>
         <option>Bachelors degree</option>
         <option>Masters degree</option>
@@ -73,8 +73,8 @@ const renderDomoList = function(){
         <h3 className="domoName">Name: {domo.name}</h3>
         <h3 className="domoAge">Age: {domo.age}</h3>
         <h3 className="domoEducation">Education Level: {domo.educationLevel}</h3>
-        <form id='removeForm' action="/remover" method="POST">
-          <input className="makeDomoSubmit" type="submit" value="Remove Domo"/>
+        <form className='removeForm' action="/remover" method="POST">
+          <input className="makeDomoSubmit" type="submit" value="Release Domo"/>
           <input type="hidden" name="_csrf" value={csrf} />
           <input type="hidden" name="id" value={domo._id}/>
         </form>

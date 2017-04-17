@@ -55,7 +55,7 @@ var renderDomo = function renderDomo() {
       React.createElement(
         "option",
         null,
-        "HS/GED"
+        "High School/GED"
       ),
       React.createElement(
         "option",
@@ -126,8 +126,8 @@ var renderDomoList = function renderDomoList() {
       ),
       React.createElement(
         "form",
-        { id: "removeForm", action: "/remover", method: "POST" },
-        React.createElement("input", { className: "makeDomoSubmit", type: "submit", value: "Remove Domo" }),
+        { className: "removeForm", action: "/remover", method: "POST" },
+        React.createElement("input", { className: "makeDomoSubmit", type: "submit", value: "Release Domo" }),
         React.createElement("input", { type: "hidden", name: "_csrf", value: csrf }),
         React.createElement("input", { type: "hidden", name: "id", value: domo._id })
       )
