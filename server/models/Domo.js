@@ -20,18 +20,18 @@ const DomoSchema = new mongoose.Schema({
     min: 0,
     required: true,
   },
-  
+
   educationLevel: {
     type: String,
     required: true,
   },
-  
+
   owner: {
     type: mongoose.Schema.ObjectId,
     required: true,
     ref: 'Account',
   },
-  
+
   createdData: {
     type: Date,
     default: Date.now,
@@ -45,10 +45,9 @@ DomoSchema.statics.toAPI = (doc) => ({
   educationLevel: doc.educationLevel,
 });
 
-DomoSchema.statics.findByIdAndRemove = (id) =>{
-  //console.dir(DomoModel);  
-  return DomoModel.find({_id:id}).remove();  
-};
+DomoSchema.statics.findByIdAndRemove = (id) =>
+  // console.dir(DomoModel);
+   DomoModel.find({ _id: id }).remove();
 
 DomoSchema.statics.findByOwner = (ownerId, callback) => {
   const search = {

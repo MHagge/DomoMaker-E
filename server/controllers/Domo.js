@@ -12,9 +12,8 @@ const makerPage = (req, res) => {
   });
 };
 
-const removeDomo = (req, res) =>{
-  
-  const domoPromise = Domo.DomoModel.findByIdAndRemove(req.body.id);/*, (err, docs) => {
+const removeDomo = (req, res) => {
+  const domoPromise = Domo.DomoModel.findByIdAndRemove(req.body.id);/* , (err, docs) => {
     if (err) {
       console.log(err);
       return res.status(400).json({ error: 'An error has occured' });
@@ -25,8 +24,8 @@ const removeDomo = (req, res) =>{
 //  domoPromise.then(() => res.json({
 //    redirect: '/maker',
 //  }));
-  
-  domoPromise.then(()=>{
+
+  domoPromise.then(() => {
     makerPage(req, res);
   });
 
